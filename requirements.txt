@@ -2,4 +2,5 @@ pandas
 numpy
 mysql-connector-python
 python-dotenv
+sqlalchemy
 -e .
