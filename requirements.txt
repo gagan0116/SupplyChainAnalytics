@@ -3,4 +3,6 @@ numpy
 mysql-connector-python
 python-dotenv
 sqlalchemy
+matplotlib
+seaborn
 -e .
