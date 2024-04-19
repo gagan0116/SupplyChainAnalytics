@@ -4,6 +4,7 @@ from dotenv import load_dotenv
 import mysql.connector as connection
 from sqlalchemy import create_engine
 import pandas as pd
+import pickle
 
 from src.exception import CustomException
 from src.logger import logging
@@ -47,6 +48,21 @@ def extract_data_from_sql(database_name, table_name):
     
     else:
         logging.info("Successfully extracted data from SQL and stored.")
+
+def load_obj(file_path):
+    try: 
+        with open(file_path, 'rb') as file_obj: 
+            return pickle.load(file_obj)
+    except Exception as e: 
+        logging.info("Error in load_object fuction in utils")
+        raise CustomException(e,sys)
+    
+def save_obj(file_path, obj): 
+    dir_path = os.path.dirname(file_path)
+    os.makedirs(dir_path, exist_ok= True)
+    with open (file_path, "wb") as file_obj: 
+        pickle.dump(obj, file_obj)
+
 
 
 

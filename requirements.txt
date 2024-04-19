@@ -6,4 +6,5 @@ sqlalchemy
 matplotlib
 seaborn
 scikit-learn
+category_encoders
 -e .
