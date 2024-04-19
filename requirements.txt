@@ -7,4 +7,5 @@ matplotlib
 seaborn
 scikit-learn
 category_encoders
+xgboost
 -e .
