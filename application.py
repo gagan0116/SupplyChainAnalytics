@@ -4,9 +4,7 @@ from src.logger import logging
 
 application = Flask(__name__)
 
-app = application
-
-@app.route('/', methods=['GET','POST'])
+@application.route('/', methods=['GET','POST'])
 def index():
     if request.method == 'GET':
         return render_template('index.html')
@@ -45,4 +43,4 @@ def index():
 
 
 if __name__ == "__main__": 
-    app.run(host = "0.0.0.0")
+    application.run(host = "0.0.0.0")
