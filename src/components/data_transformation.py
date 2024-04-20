@@ -31,11 +31,9 @@ class DataTransformation:
             categorical_cols_high_cardinality = ['Product Name', 'Category Name', 'Order City', 
                                                  'Order Country', 'Customer Zipcode']
 
-            numerical_cols = ['Days for shipping (real)', 'Days for shipment (scheduled)', 
-                              'Benefit per order', 'Latitude', 'Longitude', 'Order Item Discount Rate', 
+            numerical_cols = ['Benefit per order', 'Latitude', 'Longitude', 'Order Item Discount Rate', 
                               'Order Item Profit Ratio', 'Order Item Quantity', 'Sales', 'Product Price', 
-                              'order_year', 'order_month', 'order_day', 'shipping_year', 'shipping_month', 
-                              'shipping_day']
+                              'order_year', 'order_month', 'order_day']
             
             ordinal_cols = ['Shipping Mode']
 
@@ -112,7 +110,7 @@ class DataTransformation:
             test_arr = np.c_[input_feature_test_arr, np.array(target_feature_test_df)]
 
             save_obj(
-                filepath = self.data_transformation_config.preprocessor_obj_filepath,
+                file_path = self.data_transformation_config.preprocessor_obj_filepath,
                 obj = preprocessor_obj
             )
 

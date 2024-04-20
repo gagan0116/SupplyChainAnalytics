@@ -70,6 +70,7 @@ def evaluate_models(X_train, y_train, X_test, y_test, models, params):
         report = {}
 
         for i in range(len(list(models))):
+            logging.info(f"Training Model {list(models.keys())[i]}")
             model = list(models.values())[i]
             para=params[list(models.keys())[i]]
 

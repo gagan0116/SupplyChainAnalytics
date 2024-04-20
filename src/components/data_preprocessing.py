@@ -35,14 +35,10 @@ class DataPreprocess:
             logging.info("Dropped Null Values from the dataset")
 
             df['order date (DateOrders)'] = pd.to_datetime(df['order date (DateOrders)'])
-            df['shipping date (DateOrders)'] = pd.to_datetime(df['shipping date (DateOrders)'])\
             
             df['order_year'] = pd.DatetimeIndex(df['order date (DateOrders)']).year
             df['order_month'] = pd.DatetimeIndex(df['order date (DateOrders)']).month
             df['order_day'] = pd.DatetimeIndex(df['order date (DateOrders)']).day
-            df['shipping_year'] = pd.DatetimeIndex(df['shipping date (DateOrders)']).year
-            df['shipping_month'] = pd.DatetimeIndex(df['shipping date (DateOrders)']).month
-            df['shipping_day'] = pd.DatetimeIndex(df['shipping date (DateOrders)']).day
 
             logging.info("Feature Engineering completed for DateTime columns")
 
