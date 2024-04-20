@@ -3,8 +3,6 @@ numpy
 mysql-connector-python
 python-dotenv
 sqlalchemy
-matplotlib
-seaborn
 scikit-learn
 category_encoders
 xgboost
