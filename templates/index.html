@@ -98,7 +98,7 @@
       </p>
     </div>
 
-    <form id="analyticsForm">
+    <form id="analyticsForm" method="POST">
       <div class="form-group">
         <label for="BenefitPerOrder">Benefit per order:</label>
         <input
@@ -172,11 +172,11 @@
         />
       </div>
       <div class="form-group">
-        <label for="order year">Order Year:</label>
+        <label for="order_year">Order Year:</label>
         <input
-          type="order year"
+          type="text"
           id="order_year"
-          name="order year"
+          name="order_year"
           placeholder="Enter Order Year (int)"
         />
       </div>
@@ -258,8 +258,8 @@
     </form>
 
     <h3>Estimated Days of Shipping:</h3>
-    <h4>Days for Shipping (Scheduled): {{}}</h4>
-    <h4>Days for Shipping (Real): {{}}</h4>
+    <h4>Days for Shipping (Scheduled): {{result1}}</h4>
+    <h4>Days for Shipping (Real): {{result2}}</h4>
 
     <script>
       function populateDropdown(selectElement, options) {
