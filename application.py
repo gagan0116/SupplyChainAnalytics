@@ -3,6 +3,7 @@ from src.pipelines.predict_pipeline import CustomData, PredictPipeline
 from src.logger import logging
 
 application = Flask(__name__)
+#application is the route
 
 @application.route('/', methods=['GET','POST'])
 def index():
