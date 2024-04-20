@@ -33,7 +33,7 @@ class ModelTraining:
                 "Ridge": Ridge(), 
                 "Lasso":Lasso(), 
                 "Decision Tree": DecisionTreeRegressor(),
-                "XGBRegressor": XGBRegressor(),
+                #"XGBRegressor": XGBRegressor(),
                 "K Neighbors Regressor": KNeighborsRegressor()
                 }
             
@@ -49,10 +49,12 @@ class ModelTraining:
                 "Lasso":{
                     'alpha': [0.01, 0.1, 1.0, 10.0]
                 },
+                """
                 "XGBRegressor":{
                     'learning_rate':[.1,.01,.05,.001],
                      'n_estimators': [8,16,32,64,128,256]
                 },
+                """
                 "K Neighbors Regressor": {
                     'n_neighbors': [3, 5, 10, 20],
                     'weights': ['uniform', 'distance']
